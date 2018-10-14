@@ -38,7 +38,8 @@ public class MainActivity extends BaseActivity {
     private final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
     private final long PERIOD_MS = 2000; // time in milliseconds between successive task executions.
     private Integer[] imageIds = {R.drawable.image1,R.drawable.image2,R.drawable.image3,R.drawable.image4,R.drawable.image5};
-    private Integer[] imageholders = {R.drawable.imageholder1, R.drawable.imageholder5, R.drawable.imageholder1,R.drawable.imageholder9,R.drawable.imageholder1};
+    private Integer[] imageholders = {R.drawable.imageholder1, R.drawable.imageholder5, R.drawable.imageholder1,R.drawable.imageholder9,R.drawable.imageholder1
+    ,R.drawable.imageholder7,R.drawable.imageholder9,R.drawable.imageholder3,R.drawable.imageholder1,R.drawable.imageholder5};
     private int NUM_PAGES;
     private List<Category> categories;
 
@@ -86,6 +87,9 @@ public class MainActivity extends BaseActivity {
 
 
     private void setTheStaggeredAdapter() {
+        rvStaggeredView.setNestedScrollingEnabled(true);
+        rvStaggeredView.setFocusableInTouchMode(false);
+        rvStaggeredView.setHasFixedSize(true);
         rvStaggeredView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         StaggeredViewAdapter adapter = new StaggeredViewAdapter(this, imageholders);
         rvStaggeredView.setAdapter(adapter);
