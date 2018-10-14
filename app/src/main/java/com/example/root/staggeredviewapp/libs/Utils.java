@@ -60,11 +60,67 @@ public class Utils {
         productFives.add("Paneer Masala Box");
         categoryFive.setProducts(productFives);
 
+        Category categorySix = new Category();
+        List<String> productSix = new ArrayList<>();
+        categoryFive.setCategoryName("Ice Cream");
+        productFives.add("Dal Makhni Rice Box");
+        productFives.add("Chole Chawal Box");
+        productFives.add("Rajma Chawal Box");
+        productFives.add("Grilled Tikki Box");
+        productFives.add("Paneer Masala Box");
+        categoryFive.setProducts(productSix);
+
+        Category categorySeven = new Category();
+        List<String> productSevens = new ArrayList<>();
+        categoryFive.setCategoryName("Ice Cream");
+        productFives.add("Dal Makhni Rice Box");
+        productFives.add("Chole Chawal Box");
+        productFives.add("Rajma Chawal Box");
+        productFives.add("Grilled Tikki Box");
+        productFives.add("Paneer Masala Box");
+        categoryFive.setProducts(productSevens);
+
+        Category categoryEight = new Category();
+        List<String> productEights = new ArrayList<>();
+        categoryFive.setCategoryName("Ice Cream");
+        productFives.add("Dal Makhni Rice Box");
+        productFives.add("Chole Chawal Box");
+        productFives.add("Rajma Chawal Box");
+        productFives.add("Grilled Tikki Box");
+        productFives.add("Paneer Masala Box");
+        categoryFive.setProducts(productEights);
+
+        Category categoryNine = new Category();
+        List<String> productNines = new ArrayList<>();
+        categoryFive.setCategoryName("Ice Cream");
+        productFives.add("Dal Makhni Rice Box");
+        productFives.add("Chole Chawal Box");
+        productFives.add("Rajma Chawal Box");
+        productFives.add("Grilled Tikki Box");
+        productFives.add("Paneer Masala Box");
+        categoryFive.setProducts(productNines);
+
+        Category categoryTen = new Category();
+        List<String> productTens = new ArrayList<>();
+        categoryFive.setCategoryName("Ice Cream");
+        productFives.add("Dal Makhni Rice Box");
+        productFives.add("Chole Chawal Box");
+        productFives.add("Rajma Chawal Box");
+        productFives.add("Grilled Tikki Box");
+        productFives.add("Paneer Masala Box");
+        categoryFive.setProducts(productTens);
+
+
         categories.add(categoryOne);
         categories.add(categoryTwo);
         categories.add(categoryThree);
         categories.add(categoryFour);
         categories.add(categoryFive);
+        categories.add(categorySix);
+        categories.add(categorySeven);
+        categories.add(categoryEight);
+        categories.add(categoryNine);
+        categories.add(categoryTen);
         return categories;
     }
 }
