@@ -1,4 +1,4 @@
-package com.example.root.box8homepageapp;
+package com.example.root.staggeredviewapp;
 
 import org.junit.Test;
 

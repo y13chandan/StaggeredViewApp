@@ -1,14 +1,12 @@
-package com.example.root.box8homepageapp.fragment;
+package com.example.root.staggeredviewapp.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.root.box8homepageapp.R;
+import com.example.root.staggeredviewapp.R;
 
 public class MenuDetailsFragment extends Fragment {
 

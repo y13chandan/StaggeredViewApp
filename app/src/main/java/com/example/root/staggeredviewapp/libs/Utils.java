@@ -1,6 +1,6 @@
-package com.example.root.box8homepageapp.libs;
+package com.example.root.staggeredviewapp.libs;
 
-import com.example.root.box8homepageapp.model.Category;
+import com.example.root.staggeredviewapp.model.Category;
 
 import java.util.ArrayList;
 import java.util.List;

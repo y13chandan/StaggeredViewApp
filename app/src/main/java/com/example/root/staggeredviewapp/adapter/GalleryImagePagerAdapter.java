@@ -1,6 +1,5 @@
-package com.example.root.box8homepageapp.adapter;
+package com.example.root.staggeredviewapp.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -10,11 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.example.root.box8homepageapp.R;
-
-import java.util.ArrayList;
+import com.example.root.staggeredviewapp.R;
 
 public class GalleryImagePagerAdapter extends PagerAdapter {
     private Context mContext;

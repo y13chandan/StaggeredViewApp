@@ -1,10 +1,8 @@
-package com.example.root.box8homepageapp.activity;
+package com.example.root.staggeredviewapp.activity;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcelable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -13,23 +11,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.root.box8homepageapp.R;
-import com.example.root.box8homepageapp.adapter.GalleryImagePagerAdapter;
-import com.example.root.box8homepageapp.libs.Utils;
-import com.example.root.box8homepageapp.model.Category;
-import com.google.android.flexbox.AlignSelf;
+import com.example.root.staggeredviewapp.R;
+import com.example.root.staggeredviewapp.adapter.GalleryImagePagerAdapter;
+import com.example.root.staggeredviewapp.model.Category;
 import com.google.android.flexbox.FlexboxLayout;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.example.root.box8homepageapp.libs.Utils.getCategoryData;
+import static com.example.root.staggeredviewapp.libs.Utils.getCategoryData;
 
 public class MainActivity extends BaseActivity {
     private ViewPager mPager;

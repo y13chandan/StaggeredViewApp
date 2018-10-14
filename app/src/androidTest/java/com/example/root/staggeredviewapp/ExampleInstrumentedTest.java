@@ -1,4 +1,4 @@
-package com.example.root.box8homepageapp;
+package com.example.root.staggeredviewapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.root.box8homepageapp", appContext.getPackageName());
+        assertEquals("com.example.root.StaggeredviewApp", appContext.getPackageName());
     }
 }
