@@ -1,6 +1,5 @@
-package com.example.root.box8homepageapp.activity;
+package com.example.root.staggeredviewapp.activity;
 
-import android.media.Image;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,16 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.root.box8homepageapp.R;
-import com.example.root.box8homepageapp.adapter.ViewPagerAdapter;
-import com.example.root.box8homepageapp.fragment.MenuDetailsFragment;
-import com.example.root.box8homepageapp.libs.Utils;
-import com.example.root.box8homepageapp.model.Category;
+import com.example.root.staggeredviewapp.R;
+import com.example.root.staggeredviewapp.adapter.ViewPagerAdapter;
+import com.example.root.staggeredviewapp.fragment.MenuDetailsFragment;
+import com.example.root.staggeredviewapp.model.Category;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.root.box8homepageapp.libs.Utils.getCategoryData;
+import static com.example.root.staggeredviewapp.libs.Utils.getCategoryData;
 
 public class MenuListActivity extends AppCompatActivity {
     private TabLayout tabLayout;

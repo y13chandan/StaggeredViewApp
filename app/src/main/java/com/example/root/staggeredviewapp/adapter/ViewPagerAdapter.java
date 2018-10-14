@@ -1,11 +1,11 @@
-package com.example.root.box8homepageapp.adapter;
+package com.example.root.staggeredviewapp.adapter;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.root.box8homepageapp.model.Category;
+import com.example.root.staggeredviewapp.model.Category;
 
 import java.util.ArrayList;
 import java.util.List;

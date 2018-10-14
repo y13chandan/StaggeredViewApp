@@ -1,7 +1,4 @@
-package com.example.root.box8homepageapp.model;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package com.example.root.staggeredviewapp.model;
 
 import java.util.List;
 

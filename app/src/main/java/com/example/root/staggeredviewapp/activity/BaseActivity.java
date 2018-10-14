@@ -1,4 +1,4 @@
-package com.example.root.box8homepageapp.activity;
+package com.example.root.staggeredviewapp.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.example.root.box8homepageapp.R;
+import com.example.root.staggeredviewapp.R;
 
 public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
