@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.example.root.staggeredviewapp.R;
 import com.example.root.staggeredviewapp.adapter.GalleryImagePagerAdapter;
 import com.example.root.staggeredviewapp.adapter.StaggeredViewAdapter;
+import com.example.root.staggeredviewapp.libs.SpacesItemDecoration;
 import com.example.root.staggeredviewapp.model.Category;
 import com.google.android.flexbox.FlexboxLayout;
 
@@ -90,6 +91,8 @@ public class MainActivity extends BaseActivity {
         rvStaggeredView.setNestedScrollingEnabled(true);
         rvStaggeredView.setFocusableInTouchMode(false);
         rvStaggeredView.setHasFixedSize(true);
+        SpacesItemDecoration decoration = new SpacesItemDecoration(2);
+        rvStaggeredView.addItemDecoration(decoration);
         rvStaggeredView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         StaggeredViewAdapter adapter = new StaggeredViewAdapter(this, imageholders);
         rvStaggeredView.setAdapter(adapter);
