@@ -7,6 +7,9 @@ import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.root.staggeredviewapp.R;
 import com.example.root.staggeredviewapp.adapter.GalleryImagePagerAdapter;
+import com.example.root.staggeredviewapp.adapter.StaggeredViewAdapter;
 import com.example.root.staggeredviewapp.model.Category;
 import com.google.android.flexbox.FlexboxLayout;
 
@@ -27,14 +31,14 @@ import static com.example.root.staggeredviewapp.libs.Utils.getCategoryData;
 public class MainActivity extends BaseActivity {
     private ViewPager mPager;
     private TabLayout tabLayout;
-    private FlexboxLayout flexboxLayout;
+    private RecyclerView rvStaggeredView;
     private GalleryImagePagerAdapter mPagerAdapter;
     private int currentPage = 0;
     private Timer timer;
     private final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
     private final long PERIOD_MS = 2000; // time in milliseconds between successive task executions.
     private Integer[] imageIds = {R.drawable.image1,R.drawable.image2,R.drawable.image3,R.drawable.image4,R.drawable.image5};
-    private Integer[] imageholders = {R.drawable.imageholder1, R.drawable.imageholder9, R.drawable.imageholder3,R.drawable.imageholder7,R.drawable.imageholder5};
+    private Integer[] imageholders = {R.drawable.imageholder1, R.drawable.imageholder5, R.drawable.imageholder1,R.drawable.imageholder9,R.drawable.imageholder1};
     private int NUM_PAGES;
     private List<Category> categories;
 
@@ -49,13 +53,14 @@ public class MainActivity extends BaseActivity {
     private void initialiseView() {
         categories = getCategoryData();
         NUM_PAGES = imageIds.length;
-        flexboxLayout = findViewById(R.id.flex_layout);
+        rvStaggeredView = findViewById(R.id.rv_staggered_view);
         mPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_dots);
         mPagerAdapter = new GalleryImagePagerAdapter(this, imageIds);
         mPager.setAdapter(mPagerAdapter);
         tabLayout.setupWithViewPager(mPager, true);
-        setTheCategoryLayout();
+//        setTheCategoryLayout();
+        setTheStaggeredAdapter();
         settingHandlerAndTimer();
     }
 
@@ -79,6 +84,13 @@ public class MainActivity extends BaseActivity {
         }, DELAY_MS, PERIOD_MS);
     }
 
+
+    private void setTheStaggeredAdapter() {
+        rvStaggeredView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        StaggeredViewAdapter adapter = new StaggeredViewAdapter(this, imageholders);
+        rvStaggeredView.setAdapter(adapter);
+    }
+
     private void setTheCategoryLayout() {
         int size = imageIds.length;
         for (int i = 0;i < size; i++) {
@@ -87,7 +99,7 @@ public class MainActivity extends BaseActivity {
             TextView textView = layout.findViewById(R.id.txt_category_title);
             imageView.setImageDrawable(ContextCompat.getDrawable(this, imageholders[i]));
             textView.setText(categories.get(i).getCategoryName());
-            flexboxLayout.addView(layout);
+//            flexboxLayout.addView(layout);
             ViewGroup.LayoutParams lp = imageView.getLayoutParams();
             FlexboxLayout.LayoutParams layoutParams = (FlexboxLayout.LayoutParams)layout.getLayoutParams();
             final int finalI = i;
